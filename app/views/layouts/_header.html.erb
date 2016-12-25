@@ -1,0 +1,23 @@
+<header class="nav--top nav--root">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-4">
+                <h1 id="headerLogo">
+                    <%= link_to root_path do %>
+                        <span class="nav--avatar"></span>
+                        <span class="behind"></span>
+                    <% end %>
+                </h1>
+            </div>
+            <div class="col-md-8 col-xs-8">
+                <nav id="topNav">
+                    <ul class="nav--list">
+                        <li><%= link_to "About", root_path%></li>
+                        <li><%= link_to "Work", root_path%></li>
+                        <li><%= link_to "Contact", root_path%></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

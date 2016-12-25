@@ -1,0 +1,89 @@
+/* -- MAIN STYLES -- */
+a {
+    @extend .transition;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+/* -- IDS -- */
+#welcome {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+}
+#headerLogo {
+    -webkit-animation: fadeIn .3s ease-in-out;
+    -moz-transition: fadeIn .3s ease-in-out;
+    -o-transition: fadeIn .3s ease-in-out;
+    transition: fadeIn .3s ease-in-out;
+    border-radius: 60px;
+    overflow: hidden;
+    width: $avatar-size;
+    height: $avatar-size;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#about {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+/* -- NAVIGATION -- */
+header {
+    &.nav--top {
+        background: transparent;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        position: fixed;
+        top: 0;
+    }
+    &.nav--root {
+        -webkit-transition: all .8s;
+        transition: all .8s;
+    }
+    .nav--avatar {
+        position: absolute;
+        height: $avatar-size;
+        width: $avatar-size;
+        z-index: 1000;
+        background: url(avatar.jpg);
+        background-position: 0 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+    }
+    .nav--list {
+        @extend .transition;
+        padding-top: 1.5rem;
+        padding-left: 0;
+        position: relative;
+        float: right;
+        li {
+            display: block;
+            float: left;
+            a {
+                margin: 0 0 0 2em;
+            }
+            &:first-child > a {
+                margin-left: 0;
+            }
+        }
+    }
+}
+.section {
+    &--white {
+        background: white;
+    }
+}
+
+/* -- HELPERS -- */
+.transition {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

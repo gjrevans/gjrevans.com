@@ -6,56 +6,52 @@ a {
     }
 }
 
-/* -- IDS -- */
+/* -- ID'S -- */
 #welcome {
-    padding-top: 10rem;
-    padding-bottom: 4rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 9rem;
+    padding-bottom: 6rem;
 }
-#headerLogo {
-    -webkit-animation: fadeIn .3s ease-in-out;
-    -moz-transition: fadeIn .3s ease-in-out;
-    -o-transition: fadeIn .3s ease-in-out;
-    transition: fadeIn .3s ease-in-out;
-    border-radius: 60px;
-    overflow: hidden;
-    width: $avatar-size;
-    height: $avatar-size;
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
-#about {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+#welcomeImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zindex-welcome;
+    width: 100%;
+    height: 26rem;
+    background: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 /* -- NAVIGATION -- */
-header {
+nav {
+    // BASE PADDING
+    padding: 1rem 0;
     &.nav--top {
-        background: transparent;
-        width: 100%;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
         position: fixed;
         top: 0;
+        z-index: $zindex-navbar;
+        background: transparent;
+        width: 100%;
     }
     &.nav--root {
         -webkit-transition: all .8s;
         transition: all .8s;
     }
     .nav--avatar {
-        position: absolute;
-        height: $avatar-size;
-        width: $avatar-size;
         z-index: 1000;
-        background: url(avatar.jpg);
-        background-position: 0 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-        display: block;
+        img {
+            @extend .transition;
+            border-radius: 50%;
+            height: $avatar-size;
+            width: $avatar-size;
+        }
     }
     .nav--list {
         @extend .transition;
-        padding-top: 1.5rem;
+        padding-top: 1rem;
         padding-left: 0;
         position: relative;
         float: right;
@@ -63,7 +59,11 @@ header {
             display: block;
             float: left;
             a {
+                color: white;
                 margin: 0 0 0 2em;
+                &:hover {
+                    color: $brand-primary;
+                }
             }
             &:first-child > a {
                 margin-left: 0;
@@ -71,9 +71,22 @@ header {
         }
     }
 }
+
+/* -- PAGE SECTIONS -- */
+section {
+    padding: 2rem 0;
+}
 .section {
+
     &--white {
-        background: white;
+        background: $bg-color-1;
+    }
+    &--grey {
+        background: $bg-color-2;
+    }
+    &--title {
+        text-align: center;
+        margin-bottom: 2rem;
     }
 }
 
@@ -81,6 +94,10 @@ header {
 .transition {
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+}
+.box-shadow {
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 }
 @include media-breakpoint-up(xs) {}
 @include media-breakpoint-up(sm) {}

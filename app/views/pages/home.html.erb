@@ -1,23 +1,105 @@
-<section id="welcome" class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="welcome--wrap welcome--text">
-                <h3 class="title">Hi I'm Gordon - designer & coder</h3>
+<section id="welcome">
+    <!-- IMAGE BACKGROUND -->
+    <div id="welcomeImage"></div>
+
+    <!-- HEADER BEGIN -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title">Gordon Evans</h2>
                 <div class="subtitle">
-                    <p>I love creating useful & beautiful things for people</p>
-                    <a href="#">see my latest work</a>
+                    <p>I design and code things into existence...</p>
+                    <a href="#work" class="btn btn-primary">My Work</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="about" class="section--white text-center row">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <h5>About me</h5>
-            <p>Hey there and welcome to my site. I've been wanting to put something up on the interwebs for a while now and have finally gotten a free weekend to play around.</p>
-            <p>For those of you just joining us, my name is Gordon Evans. I was born in a small town in South Western Ontario called Pefferlaw and you guessed it grew up a hick.</p>
-
+<section id="about" class="section--white text-xs-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h5 class="section--title">About me</h5>
+                <p>Hey there and welcome to my site. I've been wanting to put something up on the interwebs for a while now and have finally gotten a free weekend to play around.</p>
+                <p>For those of you just joining us, my name is Gordon Evans. I was born in a small town in South Western Ontario called Pefferlaw and you guessed it grew up a hick.</p>
+            </div>
         </div>
     </div>
 </section>
+<section id="work" class="section--grey text-xs-center">
+    <div class="container">
+        <div class="row text-xs-center">
+            <div class="col-md-12">
+                <h5 class="section--title">
+                    Stuff I've Worked On
+                </h5>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= image_tag "project_01.jpg", class:"card-img-top", alt:"codego" %>
+                    <div class="card-block">
+                        <h4 class="card-title">Wirkn</h4>
+                        <p class="small">2015 - present</p>
+                        <p class="card-text">Wirkn is a social network for job seekers.</p>
+                        <%= link_to "Learn More", "https://wirkn.com", target: "_blank", class: "btn btn-block btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= image_tag "project_01.jpg", class:"card-img-top", alt:"codego" %>
+                    <div class="card-block">
+                        <h4 class="card-title">Leetup</h4>
+                        <p class="small">2016 - present</p>
+                        <p class="card-text">Online E-Sports Coaching for the next generation.</p>
+                        <%= link_to "Learn More", "https://leetup.gg", target: "_blank", class: "btn btn-block btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= image_tag "project_02.jpg", class:"card-img-top", alt:"codego" %>
+                    <div class="card-block">
+                        <h4 class="card-title">Kinetic Cafe</h4>
+                        <p class="small">2013 - 2015</p>
+                        <p class="card-text">Digital commerce commercialized through in store expieriences.</p>
+                        <%= link_to "Learn More", "https://kineticcafe.com", target: "_blank", class: "btn btn-block btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= image_tag "project_03.jpg", class:"card-img-top", alt:"codego" %>
+                    <div class="card-block">
+                        <h4 class="card-title">Codego</h4>
+                        <p class="card-text">Codego is Youtube + Pinterest for coding.</p>
+                        <%= link_to "Learn More", "https://codego.com", target: "_blank", class: "btn btn-block btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= image_tag "project_02.jpg", class:"card-img-top", alt:"codego" %>
+                    <div class="card-block">
+                        <h4 class="card-title">Alfred</h4>
+                        <p class="card-text">With Alred we aimed to create the digital concierge for the 1%.</p>
+                        <%= link_to "Learn More", "https://alfred.com", target: "_blank", class: "btn btn-block btn-primary" %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= image_tag "project_02.jpg", class:"card-img-top", alt:"codego" %>
+                    <div class="card-block">
+                        <h4 class="card-title">Walletwist</h4>
+                        <p class="card-text">Coupons, loyalty cards and more for the digital wallet.</p>
+                        <%= link_to "Learn More", "https://kfc.wallettwist.com", target: "_blank", class: "btn btn-block btn-primary" %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<%= render partial: "layouts/contact" %>

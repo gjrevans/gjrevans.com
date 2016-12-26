@@ -12,7 +12,7 @@ gem 'ionicons-rails'
 gem 'modernizr-rails'
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.0.0.alpha5'
-gem 'rails-assets-tether', '>= 1.1.0'
+gem 'tether-rails'
 gem 'pace-rails'
 
 group :development, :test do

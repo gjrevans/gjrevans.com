@@ -9,9 +9,9 @@ a {
 /* -- ID'S -- */
 #welcome {
     color: white;
-    background: rgba(0, 0, 0, 0.2);
-    padding-top: 9rem;
-    padding-bottom: 6rem;
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 11rem;
+    padding-bottom: 8rem;
 }
 #welcomeImage {
     position: fixed;
@@ -23,7 +23,7 @@ a {
     background: url(background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
 }
 /* -- NAVIGATION -- */
 nav {

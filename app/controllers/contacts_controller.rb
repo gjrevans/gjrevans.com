@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+    skip_before_filter :verify_authenticity_token, :only => [:new, :create]
     def new
         @contact = Contact.new
     end

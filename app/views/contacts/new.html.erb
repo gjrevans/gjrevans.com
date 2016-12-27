@@ -36,72 +36,19 @@
                     Work
                 </h5>
             </div>
+            <% @projects.each do |project| %>
             <div class="col-md-4">
                 <div class="card">
-                    <%= image_tag "project_01.jpg", class:"card-img-top", alt:"codego" %>
+                    <%= image_tag project.image, class:"card-img-top", alt:"codego" %>
                     <div class="card-block">
-                        <h4 class="card-title">Wirkn</h4>
-                        <p class="small">2015 - present</p>
-                        <p class="card-text">Wirkn is a social network for job seekers.</p>
+                        <h4 class="card-title"><%= project.title %></h4>
+                        <p class="small"><%= project.date %></p>
+                        <p class="card-text"><%= project.description %></p>
                         <%= link_to "Learn More", "https://wirkn.com", target: "_blank", class: "btn btn-block btn-primary" %>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <%= image_tag "project_02.jpg", class:"card-img-top", alt:"codego" %>
-                    <div class="card-block">
-                        <h4 class="card-title">Leetup</h4>
-                        <p class="small">2016 - present</p>
-                        <p class="card-text">Online E-Sports Coaching for the next generation of gamers.</p>
-                        <%= link_to "Learn More", "https://leetup.gg", target: "_blank", class: "btn btn-block btn-primary" %>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <%= image_tag "project_03.jpg", class:"card-img-top", alt:"codego" %>
-                    <div class="card-block">
-                        <h4 class="card-title">Kinetic Cafe</h4>
-                        <p class="small">2013 - 2015</p>
-                        <p class="card-text">Digital commerce commercialized through in store expieriences.</p>
-                        <%= link_to "Learn More", "http://kineticcafe.com", target: "_blank", class: "btn btn-block btn-primary" %>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <%= image_tag "project_04.jpg", class:"card-img-top", alt:"codego" %>
-                    <div class="card-block">
-                        <h4 class="card-title">Alfred</h4>
-                        <p class="small">2012 - 2013</p>
-                        <p class="card-text">The digital concierge for the 1% of society.</p>
-                        <%= link_to "Learn More", "https://alfred.com", target: "_blank", class: "btn btn-block btn-primary" %>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <%= image_tag "project_05.jpg", class:"card-img-top", alt:"codego" %>
-                    <div class="card-block">
-                        <h4 class="card-title">Codego</h4>
-                        <p class="small">2011 - 2012</p>
-                        <p class="card-text">Community code snippets to help developers do more, faster.</p>
-                        <%= link_to "Learn More", "https://codego.com", target: "_blank", class: "btn btn-block btn-primary" %>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <%= image_tag "project_06.jpg", class:"card-img-top", alt:"codego" %>
-                    <div class="card-block">
-                        <h4 class="card-title">Walletwist</h4>
-                        <p class="small">2010 - 2011</p>
-                        <p class="card-text">Coupons, loyalty cards and more for the digital wallet.</p>
-                        <%= link_to "Learn More", "https://kfc.wallettwist.com", target: "_blank", class: "btn btn-block btn-primary" %>
-                    </div>
-                </div>
-            </div>
+            <% end %>
         </div>
     </div>
 </section>

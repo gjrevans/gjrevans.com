@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-    root to: "pages#home"
+    root to: "contacts#new"
+    resources :contacts, only: [:new, :create]
 end

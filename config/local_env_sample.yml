@@ -1,0 +1,4 @@
+SMTP_USERNAME: ''
+SMTP_PASSWORD: ''
+SMTP_DOMAIN: ''
+DEFAULT_URL_HOST: 'https://gjrevans.herokuapp.com'

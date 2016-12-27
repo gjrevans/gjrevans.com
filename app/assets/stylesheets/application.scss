@@ -3,11 +3,12 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
 
+/* Libraries */
+@import "animate";
+@import "pace/blue/pace-theme-minimal";
+
 /* Styles */
 @import "variables";
 @import "bootstrap";
 @import "bootswatch";
 @import "styles";
-
-/* Libraries */
-@import "pace/blue/pace-theme-minimal"

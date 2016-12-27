@@ -29,6 +29,7 @@
 <body>
     <%= render partial: "layouts/header" %>
     <div id="mainContent">
+        <%= render partial: 'layouts/notify', flash: flash %>
         <%= yield %>
     </div>
 </body>

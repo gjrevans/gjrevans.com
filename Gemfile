@@ -15,6 +15,7 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'tether-rails'
 gem 'pace-rails'
 gem 'mail_form'
+gem 'bootstrap-growl-rails'
 
 group :development, :test do
     gem 'byebug', platform: :mri

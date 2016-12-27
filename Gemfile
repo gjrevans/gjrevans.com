@@ -17,6 +17,7 @@ gem 'tether-rails'
 gem 'pace-rails'
 gem 'mail_form'
 gem 'bootstrap-growl-rails'
+gem 'devise'
 
 group :development, :test do
     gem 'byebug', platform: :mri

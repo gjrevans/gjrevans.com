@@ -49,6 +49,9 @@
                         <% else %>
                             <%= link_to "Site Shut Down", project.link, target: "_blank", class: "btn btn-block btn-secondary disabled", disabled: true %>
                         <% end %>
+                        <% if user_signed_in? %>
+                            <%= link_to 'Edit', edit_project_path(project), class: "btn btn-block btn-primary" %>
+                        <% end %>
                     </div>
                 </div>
             </div>

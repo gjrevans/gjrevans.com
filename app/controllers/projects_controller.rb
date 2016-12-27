@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+    skip_before_filter :verify_authenticity_token, :only => [:new, :create]
     before_action :set_project, only: [:show, :edit, :update, :destroy]
 
     def index

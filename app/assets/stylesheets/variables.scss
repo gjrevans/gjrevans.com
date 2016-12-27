@@ -568,9 +568,9 @@ $zindex-welcome:             -1 !default;
 
 // 16. Navbar
 
-$navbar-border-radius:              $border-radius !default;
+$navbar-border-radius:              0 !default;
 $navbar-padding-x:                  $spacer !default;
-$navbar-padding-y:                  3rem !default;
+$navbar-padding-y:                  2rem !default;
 
 $navbar-brand-padding-y:            .25rem !default;
 

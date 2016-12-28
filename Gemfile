@@ -17,6 +17,7 @@ gem 'tether-rails'
 gem 'pace-rails'
 gem 'mail_form'
 gem 'bootstrap-growl-rails'
+gem 'bootstrap-wysihtml5-rails'
 gem 'devise'
 
 group :development, :test do

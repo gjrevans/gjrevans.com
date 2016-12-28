@@ -17,4 +17,5 @@
 //= require turbolinks
 //= require pace/pace
 //= require bootstrap-notify
+//= require bootstrap-wysihtml5
 //= require_tree .

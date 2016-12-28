@@ -12,13 +12,21 @@
                     <p class="font-weight-bold small"><%= @project.date %></p>
                 </div>
                 <div class="col-md-6 text-xs-right">
-                    <%= link_to_if(@project.link.present?, "Visit #{@project.title}", @project.link, class: "btn btn-primary") %>
+                    <% if @project.link.present? %>
+                    <%= link_to "Visit #{@project.title}", @project.link, class: "btn btn-primary", target: "_blank" %>
+                    <% end %>
                 </div>
             </div>
 
             <div class="py-3">
                 <h5>About The Project</h5>
                 <p><%= simple_format(@project.description) %></p>
+            </div>
+            <hr>
+            <!-- RANDOM PROJECTS -->
+            <h5>Some Other Projects</h5>
+            <div class="row pt-2">
+                <%= render partial: "contacts/project_cards" %>
             </div>
         </div>
     </div>

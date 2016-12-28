@@ -2,6 +2,12 @@
 
 // 1. Cards
 //
+.card:hover {
+    @extend .box-shadow;
+    @extend .transition;
+    border: 1px solid $brand-primary;
+}
+
 .card-img-top {
   width: 100%;
   height: auto;

@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-    before_action :authenticate_user!
+    before_action :authenticate_user!, except: [:show]
     before_action :set_project, only: [:show, :edit, :update, :destroy]
 
     def index
@@ -46,6 +46,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-        params.require(:project).permit(:title, :image, :date, :description, :link)
+        params.require(:project).permit(:title, :image, :banner, :date, :description, :summary, :link)
     end
 end

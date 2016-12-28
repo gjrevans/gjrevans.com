@@ -27,10 +27,10 @@
 </head>
 
 <body>
-    <%= render partial: "layouts/header" if current_page?(root_path) %>
-    <div id="mainContent">
-        <%= render partial: 'layouts/notify', flash: flash %>
-        <%= yield %>
-    </div>
+    <%= render partial: 'layouts/notify', flash: flash %>
+    <% safe_id = params[:id] || 0 %>
+    <%= render partial: "layouts/header" if current_page?(root_path) || current_page?(controller: "/projects", action: "show", id: safe_id) %>
+    <%= yield %>
+    <%= render partial: "layouts/footer" if current_page?(root_path) || current_page?(controller: "/projects", action: "show", id: safe_id) %>
 </body>
 </html>

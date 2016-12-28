@@ -1,0 +1,23 @@
+// Mixins & Helpers
+//
+// Add additional mixins and helpers to this file
+
+/* -- MIXINS -- */
+@mixin hero-image($image-height) {
+    z-index: $zindex-hero;
+    width: 100%;
+    height: $image-height;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* -- HELPERS -- */
+.transition {
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.box-shadow {
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+}

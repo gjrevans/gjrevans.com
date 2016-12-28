@@ -1,14 +1,9 @@
 /* -- MAIN STYLES -- */
-a {
-    @extend .transition;
-    &:hover {
-        text-decoration: none;
-    }
-}
 
 /* -- ID'S -- */
 #pageContent {
-    margin-top: 40px;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 #welcome {
     color: white;
@@ -20,13 +15,11 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: $zindex-welcome;
-    width: 100%;
-    height: 26rem;
     background: url("https://s3.amazonaws.com/gjrevans.com/images/header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include hero-image(26rem);
+}
+#projectImage {
+    @include hero-image(22rem);
 }
 /* -- NAVIGATION -- */
 nav {
@@ -90,16 +83,6 @@ section {
         text-align: center;
         margin-bottom: 2rem;
     }
-}
-
-/* -- HELPERS -- */
-.transition {
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-}
-.box-shadow {
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* -- RESPONSIVE FIXES -- */

@@ -44,11 +44,7 @@
                         <h4 class="card-title"><%= project.title %></h4>
                         <p class="small"><%= project.date %></p>
                         <p class="card-text"><%= project.description %></p>
-                        <% if project.link.present? %>
-                            <%= link_to "View Site", project.link, target: "_blank", class: "btn btn-block btn-primary" %>
-                        <% else %>
-                            <%= link_to "Site Shut Down", project.link, target: "_blank", class: "btn btn-block btn-secondary disabled", disabled: true %>
-                        <% end %>
+                        <%= link_to "View Case Study", project_path(project), class: "btn btn-block btn-primary" %>
                         <% if user_signed_in? %>
                             <%= link_to 'Edit', edit_project_path(project), class: "btn btn-block btn-primary" %>
                         <% end %>
@@ -62,4 +58,3 @@
 
 <!-- CONTACT FORM -->
 <%= render partial: "contact" %>
-<%= render partial: "layouts/footer" %>

@@ -9,6 +9,13 @@
 
 // 2. Typography
 //
+a {
+    @extend .transition;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 p {
     font-weight: 300;
 }

@@ -6,7 +6,7 @@
             <h4 class="card-title"><%= project.title %></h4>
             <p class="small"><%= project.date %></p>
             <p class="card-text"><%= project.summary %></p>
-            <%= link_to "View Case Study", project_path(project), class: "btn btn-block btn-primary" %>
+            <%= link_to "Read the Story", project_path(project), class: "btn btn-block btn-primary" %>
             <% if user_signed_in? %>
                 <%= link_to 'Edit', edit_project_path(project), class: "btn btn-block btn-primary" %>
             <% end %>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    root to: "contacts#new"
+    root to: "pages#index"
     resources :contacts, only: [:new, :create]
     resources :projects
     devise_for :users

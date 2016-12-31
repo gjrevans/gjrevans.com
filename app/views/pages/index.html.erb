@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <h5 class="section--title">About</h5>
+                <h5 class="section--title mb-2">About</h5>
                 <p>There are two main reasons for this site's existence.</p>
                 <p>First, I've wanted to create up a personal site for a quite awhile now, so <code>hello world</code>. Second, I'd like to use this site as the boilerplate for a bunch of frontend experimentation.</p>
                 <p>So, that's why the site's here, but you may also be wondering who I am.<p>
@@ -28,17 +28,17 @@
         </div>
     </div>
 </section>
-<section id="work" class="section--grey text-xs-center">
+<section id="stories" class="section--grey text-xs-center">
     <div class="container">
         <div class="row text-xs-center">
             <div class="col-md-12">
-                <h5 class="section--title mb-1">Stories n'Stuff</h5>
-                <p class="mb-3">A collection of my favourite projects, a few rants and some longer stories.</p>
+                <h5 class="section--title mb-2">Stories</h5>
+                <p>A collection of my favourite projects, a few rants and some longer stories.</p>
             </div>
-            <%= render partial: "project_cards" %>
+            <%= render partial: "projects/project_cards" %>
         </div>
     </div>
 </section>
 
 <!-- CONTACT FORM -->
-<%= render partial: "contact" %>
+<%= render partial: "contacts/contact" %>

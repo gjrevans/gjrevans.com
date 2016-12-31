@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
         @projects = Project.order("RANDOM()").limit(3)
     end
 
+
     def new
         @project = Project.new
     end

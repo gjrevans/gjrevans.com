@@ -7,6 +7,10 @@ class ProjectsController < ApplicationController
     end
 
     def show
+        if @project.unpublished?
+            flash[:danger] = "Oh no, that project is unpublushed!"
+            redirect_to root_path
+        end
         @projects = Project.order("RANDOM()").limit(3)
     end
 
@@ -21,7 +25,8 @@ class ProjectsController < ApplicationController
     def create
         @project = Project.new(project_params)
         if @project.save
-            redirect_to @project, notice: 'Project was successfully created.'
+            flash[:success] = 'Project was successfully created!'
+            redirect_to @project
         else
             render :new
         end
@@ -29,7 +34,8 @@ class ProjectsController < ApplicationController
 
     def update
         if @project.update(project_params)
-            redirect_to @project, notice: 'Project was successfully updated.'
+            flash[:success] = 'Project was successfully updated!'
+            redirect_to @project
         else
             render :edit
         end
@@ -37,7 +43,8 @@ class ProjectsController < ApplicationController
 
     def destroy
         @project.destroy
-        redirect_to projects_url, notice: 'Project was successfully destroyed.'
+        flash[:success] = 'Project was successfully deleted!'
+        redirect_to projects_url
     end
 
     private
@@ -48,6 +55,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-        params.require(:project).permit(:title, :image, :banner, :date, :description, :summary, :link)
+        params.require(:project).permit(:title, :image, :banner, :date, :description, :summary, :link, :status)
     end
 end

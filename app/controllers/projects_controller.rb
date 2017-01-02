@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
             flash[:danger] = "Oh no, that project is unpublushed!"
             redirect_to root_path
         end
-        @projects = Project.order("RANDOM()").limit(3)
+        @projects = Project.where(status: :published).order("RANDOM()").limit(3)
     end
 
 

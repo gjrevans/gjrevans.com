@@ -12,8 +12,8 @@
                         <th>Title</th>
                         <th>Image</th>
                         <th>Date</th>
-                        <th>Description</th>
-                        <th colspan="3"></th>
+                        <th>Status</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
 
@@ -24,10 +24,12 @@
                         <td><%= project.title %></td>
                         <td><a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Project Image" data-content='<img src="<%= image_url(project.image) %>" style="width:100%;height:170px;" alt="Project Image">'>Image</a></td>
                         <td><%= project.date %></td>
-                        <td><%= truncate(project.description, length: 200) %></td>
-                        <td><%= link_to 'Show', project %></td>
-                        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-                        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        <td><%= project.status %></td>
+                        <td>
+                            <%= link_to project, title: "show" do %><span class="fa fa-eye mr-1"></span><% end %>
+                            <%= link_to edit_project_path(project), title: "edit" do %><span class="fa fa-edit mr-1"></span><% end %>
+                            <%= link_to project, method: :delete, data: { confirm: 'Are you sure?' }, title: "delete" do %><span class="fa fa-times"></span><% end %>
+                        </td>
                     </tr>
                     <% end %>
                 </tbody>

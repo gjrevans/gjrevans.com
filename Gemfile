@@ -19,6 +19,7 @@ gem 'mail_form'
 gem 'bootstrap-growl-rails'
 gem 'bootstrap-wysihtml5-rails'
 gem 'devise'
+gem 'friendly_id'
 
 group :development, :test do
     gem 'byebug', platform: :mri

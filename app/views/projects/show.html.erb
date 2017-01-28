@@ -45,22 +45,18 @@
         // Add Responsive Class
         $("#projectDescription img").addClass("img-fluid");
 
+        // Basic Word Count
+        var $wordsPerMinute = 150;
+        $("#timeLeft").html((<%= @word_count %> / $wordsPerMinute).toFixed(2));
+
         // Calulate Read Time on load, scroll & resize
-        $(window)
-        .load(function (event) {
-            calculateReadTime();
-        })
-        .scroll(function (event) {
-            calculateReadTime();
-        })
-        .resize(function (event) {
+        $(window).scroll(function (event) {
             calculateReadTime();
         });
 
         function calculateReadTime() {
             // Constants
             var $topOffest = $("#projectDescription").offset().top;
-            var $wordsPerMinute = 150;
             var $lineHeight = 34;
 
             // Window Width
@@ -68,13 +64,15 @@
 
             // Words per line based on screen width (!very arbitrary cunt!)
             if ( $windowWidth > 1200) {
-                var $wordPerLine =  20;
+                var $wordPerLine =  21;
             } else if ( $windowWidth > 991) {
                 var $wordPerLine =  17;
             } else if ( $windowWidth > 768) {
                 var $wordPerLine =  14;
+            } else if ( $windowWidth > 500) {
+                var $wordPerLine =  10;
             } else {
-                var $wordPerLine =  $windowWidth / 52;
+                var $wordPerLine =  7;
             }
 
             // Calculate time left based on scroll postion

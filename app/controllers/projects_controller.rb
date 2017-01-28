@@ -12,6 +12,8 @@ class ProjectsController < ApplicationController
             redirect_to root_path
         end
         @projects = Project.where(status: :published).order("RANDOM()").limit(3)
+
+        @word_count = @project.description.scan(/\w+/).size
     end
 
 

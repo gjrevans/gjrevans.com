@@ -45,14 +45,15 @@
         // Add Responsive Class
         $("#projectDescription img").addClass("img-fluid");
 
-        // Calulate Read Time
-        calculateReadTime();
-
-        $(window).scroll(function (event) {
+        // Calulate Read Time on load, scroll & resize
+        $(window)
+        .load(function (event) {
             calculateReadTime();
-        });
-
-        $(window).resize(function (event) {
+        })
+        .scroll(function (event) {
+            calculateReadTime();
+        })
+        .resize(function (event) {
             calculateReadTime();
         });
 
@@ -65,7 +66,7 @@
             // Window Width
             var $windowWidth = $(window).width();
 
-            // These numbers are super arbitrary
+            // Words per line based on screen width (!very arbitrary cunt!)
             if ( $windowWidth > 1200) {
                 var $wordPerLine =  20;
             } else if ( $windowWidth > 991) {
@@ -76,10 +77,12 @@
                 var $wordPerLine =  $windowWidth / 52;
             }
 
-            // Time Left Calculator
+            // Calculate time left based on scroll postion
             var $scroll = $(window).scrollTop();
             var $distanceToEnd = $("#endOfProject").offset().top - $scroll;
             var $timeLeft = (((($distanceToEnd - $topOffest) / $lineHeight) * $wordPerLine) / $wordsPerMinute).toFixed(2);
+
+            // Put updated time into the floater
             $("#timeLeft").html($timeLeft);
 
             // Fade out when you reach the bottom

@@ -9,6 +9,12 @@
                 <% end %>
                 <%= link_to @project.title, "#", class: "breadcrumb-item active" %>
             </nav>
+            <div class="read-time-floater animated tada box-shadow">
+                <div class="read-time-content">
+                    <div id="timeLeft"></div>
+                    <div class="small"><strong>MINUTES</strong></div>
+                </div>
+            </div>
             <div class="row flex-items-xs-middle">
                 <div class="col-md-6">
                     <h2><%= @project.title %></h2>
@@ -26,7 +32,7 @@
             </div>
             <hr>
             <!-- RANDOM PROJECTS -->
-            <h5>Some Other Projects</h5>
+            <h5 id="endOfProject">Some Other Projects</h5>
             <div class="row pt-2">
                 <%= render partial: "projects/project_cards" %>
             </div>
@@ -35,5 +41,49 @@
 </div>
 
 <script type="text/javascript">
-    $("#projectDescription img").addClass("img-fluid");
+    $(document).ready(function(){
+        // Add Responsive Class
+        $("#projectDescription img").addClass("img-fluid");
+
+        // Calulate Read Time
+        calculateReadTime();
+
+        $(window).scroll(function (event) {
+            calculateReadTime();
+        });
+
+        $(window).resize(function (event) {
+            calculateReadTime();
+        });
+
+        function calculateReadTime() {
+            // Constants
+            var $windowWidth = $(window).width();
+            var $topOffest = 800;
+            var $lineHeight = 34;
+            var $wordsPerMinute = 120;
+            if ( $windowWidth > 1200) {
+                var $wordPerLine =  20;
+            } else if ( $windowWidth > 991) {
+                var $wordPerLine =  17;
+            } else if ( $windowWidth > 768) {
+                var $wordPerLine =  14;
+            } else {
+                var $wordPerLine =  $windowWidth / 52;
+            }
+
+            // Time Left Calculator
+            var $scroll = $(window).scrollTop();
+            var $distanceToEnd = $("#endOfProject").offset().top - $scroll;
+            var $timeLeft = (((($distanceToEnd - $topOffest) / $lineHeight) * $wordPerLine) / $wordsPerMinute).toFixed(2);
+            $("#timeLeft").html($timeLeft);
+
+            // Fade out when you reach the bottom
+            if ($timeLeft < 0.1) {
+                $(".read-time-floater").fadeOut(200);
+            } else {
+                $(".read-time-floater").fadeIn(200);
+            }
+        };
+    });
 </script>

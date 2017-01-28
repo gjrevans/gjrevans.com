@@ -85,6 +85,23 @@ section {
     }
 }
 
+/* -- PROJECTS -- */
+.read-time-floater {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid $brand-primary;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: $zindex-floater;
+}
+.read-time-content {
+    text-align: center;
+    margin-top: 24px;
+}
+
 /* -- RESPONSIVE FIXES -- */
 @include media-breakpoint-only(xs) {
     nav .nav--list li a {

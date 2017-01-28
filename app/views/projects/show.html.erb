@@ -9,10 +9,10 @@
                 <% end %>
                 <%= link_to @project.title, "#", class: "breadcrumb-item active" %>
             </nav>
-            <div class="read-time-floater animated tada box-shadow">
+            <div class="read-time-floater animated bounceInRight box-shadow">
                 <div class="read-time-content">
-                    <div id="timeLeft"></div>
-                    <div class="small"><strong>MINUTES</strong></div>
+                    <div class="read-time-number" id="timeLeft"></div>
+                    <div class="small">MINUTES</div>
                 </div>
             </div>
             <div class="row flex-items-xs-middle">
@@ -58,10 +58,14 @@
 
         function calculateReadTime() {
             // Constants
-            var $windowWidth = $(window).width();
+            var $wordsPerMinute = 120;
             var $topOffest = 800;
             var $lineHeight = 34;
-            var $wordsPerMinute = 120;
+
+            // Window Width
+            var $windowWidth = $(window).width();
+
+            // These numbers are super arbitrary
             if ( $windowWidth > 1200) {
                 var $wordPerLine =  20;
             } else if ( $windowWidth > 991) {

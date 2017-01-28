@@ -101,6 +101,9 @@ section {
     text-align: center;
     margin-top: 24px;
 }
+.read-time-number {
+    font-weight: 600;
+}
 
 /* -- RESPONSIVE FIXES -- */
 @include media-breakpoint-only(xs) {

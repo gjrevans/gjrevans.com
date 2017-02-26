@@ -1,24 +1,8 @@
 # README
+This is a the gjrevans.com codebase. Feel free to read through and learn from my personal discoveries.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###Running The Project
+* Fork & clone
+* Run `bundle-install`
+* Run `rails s`
+* Visit localhost:3000

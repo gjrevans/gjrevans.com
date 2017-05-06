@@ -1,0 +1,17 @@
+[
+    {"image": "icons/node.png", "name": "Node JS"},
+    {"image": "icons/rails.png", "name": "Ruby on Rails"},
+    {"image": "icons/jquery.png", "name": "Jquery"},
+    {"image": "icons/react.png", "name": "React"},
+    {"image": "icons/html.png", "name": "HTML 5"},
+    {"image": "icons/css.png", "name": "CSS 3"},
+    {"image": "icons/sass.png", "name": "Sass"},
+    {"image": "icons/gulp.png", "name": "Gulp"},
+    {"image": "icons/aws.png", "name": "AWS"},
+    {"image": "icons/heroku.png", "name": "Heroku"},
+    {"image": "icons/redis.png", "name": "redis"},
+    {"image": "icons/postgresql.png", "name": "Postgresql"},
+    {"image": "icons/mongo.png", "name": "Mongo DB"},
+    {"image": "icons/github.png", "name": "GitHub"},
+    {"image": "icons/jenkins.png", "name": "Jenkins"}
+]

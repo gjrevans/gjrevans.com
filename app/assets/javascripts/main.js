@@ -9,6 +9,9 @@ ga('send', 'pageview');
 
 /* -- PAGE JS --*/
 $(document).ready(function(){
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
     // Minipulate navigation style based on position
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();

@@ -13,32 +13,81 @@
         </div>
     </div>
 </section>
-<section id="about" class="section--white text-xs-center">
+
+<section id="overview" class="section--white text-xs-center">
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <h5 class="section--title mb-2">About</h5>
+                <h5 class="section--title mb-2">Overview</h5>
                 <p>There are two main reasons for this site's existence.</p>
-                <p>First, I've wanted to create up a personal site for a quite awhile now, so <code>hello world</code>. Second, I'd like to use this site as the boilerplate for a bunch of frontend experimentation.</p>
-                <p>So, that's why the site's here, but you may also be wondering who I am.<p>
-                <p>While its potentially unhealthy, I feel that the answer to that question is probably best answered with what I do for a living. Currently, I'm employed at a place called <a href="#work">Wirkn</a> where I head up the product & engineering team.</p>
-                <p>When I started school nearly 10 years ago excited about a future in mechanical engineering, I never imagined that someday I'd leave it behind to instead create software from my couch.</p>
-                <p>But, thanks to handful of meaningful co-op expieriences at <a href="https://uwaterloo.ca">UW</a>, some seriously hard work and a bit of dumb luck I've found success in the product end of the startup world and have massively enjoyed breathing life into new products for the better part of the last decade.</p>
+                <p>First, like come on, who doesn't have a personal - and so, <code>hello world</code>. Second, I'd like to use this site as the foundation for a bunch of frontend experimentation and hobby projects.</p>
             </div>
         </div>
     </div>
 </section>
+
 <section id="stories" class="section--grey text-xs-center">
     <div class="container">
         <div class="row text-xs-center">
             <div class="col-md-12">
                 <h5 class="section--title mb-2">Stories</h5>
-                <p>A collection of my favourite projects, a few rants and some longer stories.</p>
+                <p>A collection of my favourite endeavours, a few rants and some longer stories.</p>
             </div>
-            <%= render partial: "projects/project_cards" %>
+            <%= render partial: "projects/project_card" %>
         </div>
     </div>
 </section>
 
-<!-- CONTACT FORM -->
-<%= render partial: "contacts/contact" %>
+<section id="about" class="section--white text-xs-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h5 class="section--title mb-2">About</h5>
+                <p>While its potentially unhealthy, I feel that the answer to that question is probably best answered with what I do for a living. Currently, I'm working on an exciting startup called <a href="https://wirkn.com" target="_blank">Wirkn</a> where I head up the product & engineering team.</p>
+                <p>When I started school nearly 10 years ago excited about a future in mechanical engineering, I never imagined that someday I'd leave it behind to instead create software from my couch.</p>
+                <p>But, thanks to handful of meaningful co-op expieriences at <a href="https://uwaterloo.ca" target="_blank">UW</a>, some seriously hard work and a bit of dumb luck I've found success in the product end of the startup world and have massively enjoyed breathing life into new products for the better part of the last decade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sites" class="section--grey text-xs-center">
+    <div class="container">
+        <div class="row text-xs-center">
+            <div class="col-md-12 mb-3">
+                <h5 class="section--title mb-2">Hobby Projects</h5>
+                <p>
+                    Some of the hobby projects and their<i class="fa fa-fw fa-github"></i><a href="https://github.com/gjrevans" target="_blank">GitHub Repositories</a> I've worked on to stay fresh.<br>
+                    Please note, I'm using the free tier of Heroku to host these site so they can take up to 30s to load.
+                </p>
+            </div>
+            <div class="col-md-12">
+                <div class="card-columns">
+                    <%= render partial: "sites/site_card" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sites" class="section--white text-xs-center">
+    <div class="container">
+        <div class="row text-xs-center">
+            <div class="col-md-12 mb-3">
+                <h5 class="section--title mb-2">Technologies</h5>
+                <p>Because who doesn't love a nice tech-stack, here are some of the technologies I love to work with.</p>
+            </div>
+            <%= render partial: "layouts/technologies" %>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section--grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <%= render partial: "contacts/contact" %>
+            </div>
+        </div>
+    </div>
+</section>

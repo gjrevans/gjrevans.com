@@ -1,0 +1,20 @@
+<% @sites.each do |site| %>
+<div class="card">
+    <%= image_tag site.image, class:"card-img-top", alt:"codego" %>
+    <div class="card-block">
+        <h4 class="card-title"><%= site.title %></h4>
+        <p class="card-text"><%= site.description %></p>
+        <div class="row">
+            <div class="col-xs-6">
+                <%= link_to "Launch", site_path(site), class: "btn btn-block btn-primary", target: "blank"  %>
+            </div>
+            <div class="col-xs-6">
+                <%= link_to "Github", site.github, class: "btn btn-block btn-primary", target: "blank" %>
+            </div>
+        </div>
+        <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_site_path(site), class: "btn btn-block btn-primary" %>
+        <% end %>
+    </div>
+</div>
+<% end %>

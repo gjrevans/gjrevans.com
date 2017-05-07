@@ -6,7 +6,7 @@
         <p class="card-text"><%= site.description %></p>
         <div class="row">
             <div class="col-xs-6">
-                <%= link_to site_path(site), class: "btn btn-block btn-outline-primary", target: "blank" do %>
+                <%= link_to site.link, class: "btn btn-block btn-outline-primary", target: "blank" do %>
                 <i class="fa fa-fw fa-rocket mr-1"></i>Launch
                 <% end %>
             </div>
@@ -17,7 +17,9 @@
             </div>
         </div>
         <% if user_signed_in? %>
-            <%= link_to 'Edit', edit_site_path(site), class: "mt-3" %>
+        <div class="mt-3">
+            <%= link_to 'Edit', edit_site_path(site) %>
+        </div>
         <% end %>
     </div>
 </div>

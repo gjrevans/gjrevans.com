@@ -236,3 +236,10 @@ $curve2: cubic-bezier(0.645, 0.045, 0.355, 1);
     90%  { width: 14px; }
     100% { width: 14px; }
 }
+
+@include media-breakpoint-only(xs) {
+    .space {
+        position: relative;
+        height: 200px;
+    }
+}

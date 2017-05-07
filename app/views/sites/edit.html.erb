@@ -1,6 +1,14 @@
-<div id='pageContent' class="col-md-4 offset-md-4">
-<h1>Editing Site</h1>
-<%= render 'form', site: @site %>
-<%= link_to 'Show', @site %> |
-<%= link_to 'Back', sites_path %>
+<div id='pageContent' class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <h1>Editing Site</h1>
+            <%= render 'form', site: @site %>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <%= link_to 'Show', @site %> |
+                    <%= link_to 'Back', sites_path %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

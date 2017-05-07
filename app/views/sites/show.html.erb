@@ -1,24 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div id="pageContent" class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <p>
+              <strong>Title:</strong>
+              <%= @site.title %>
+            </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @site.title %>
-</p>
+            <p>
+              <strong>Image:</strong>
+              <%= @site.image %>
+            </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @site.image %>
-</p>
+            <p>
+              <strong>Github:</strong>
+              <%= @site.github %>
+            </p>
 
-<p>
-  <strong>Github:</strong>
-  <%= @site.github %>
-</p>
+            <p>
+              <strong>Link:</strong>
+              <%= @site.link %>
+            </p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @site.link %>
-</p>
-
-<%= link_to 'Edit', edit_site_path(@site) %> |
-<%= link_to 'Back', sites_path %>
+            <%= link_to 'Edit', edit_site_path(@site) %> |
+            <%= link_to 'Back', sites_path %>
+        </div>
+    </div>
+</div>

@@ -1,42 +1,49 @@
 <%= form_for(site) do |f| %>
-  <% if site.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(site.errors.count, "error") %> prohibited this site from being saved:</h2>
+<% if site.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(site.errors.count, "error") %> prohibited this site from being saved:</h2>
 
-      <ul>
-      <% site.errors.full_messages.each do |message| %>
+    <ul>
+        <% site.errors.full_messages.each do |message| %>
         <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <% end %>
+    </ul>
+</div>
+<% end %>
 
-  <div class="field">
+<div class="from-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+    <%= f.text_field :title, class: 'form-control' %>
+</div>
 
-  <div class="field">
+<div class="from-group">
     <%= f.label :image %>
-    <%= f.text_field :image %>
-  </div>
+    <%= f.text_field :image, class: 'form-control' %>
+</div>
 
-  <div class="field">
+<div class="from-group">
     <%= f.label :github %>
-    <%= f.text_field :github %>
-  </div>
+    <%= f.text_field :github, class: 'form-control' %>
+</div>
 
-  <div class="field">
+<div class="from-group">
     <%= f.label :link %>
-    <%= f.text_field :link %>
-  </div>
+    <%= f.text_field :link, class: 'form-control' %>
+</div>
 
-  <div class="field">
+<div class="from-group">
     <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
+    <%= f.text_field :description, class: 'form-control' %>
+</div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="from-group">
+            <%= f.submit 'submit', class: 'btn btn-primary form-control' %>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <%= link_to 'Back', sites_path, class: 'btn btn-primary form-control' %>
+    </div>
+</div>
 <% end %>

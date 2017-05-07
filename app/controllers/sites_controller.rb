@@ -23,43 +23,28 @@ class SitesController < ApplicationController
     end
 
     # POST /sites
-    # POST /sites.json
     def create
         @site = Site.new(site_params)
-
-        respond_to do |format|
-            if @site.save
-                format.html { redirect_to @site, notice: 'Site was successfully created.' }
-                format.json { render :show, status: :created, location: @site }
-            else
-                format.html { render :new }
-                format.json { render json: @site.errors, status: :unprocessable_entity }
-            end
+        if @site.save
+            redirect_to @site, notice: 'Site was successfully created.'
+        else
+            render :new
         end
     end
 
     # PATCH/PUT /sites/1
-    # PATCH/PUT /sites/1.json
     def update
-        respond_to do |format|
-            if @site.update(site_params)
-                format.html { redirect_to @site, notice: 'Site was successfully updated.' }
-                format.json { render :show, status: :ok, location: @site }
-            else
-                format.html { render :edit }
-                format.json { render json: @site.errors, status: :unprocessable_entity }
-            end
+        if @site.update(site_params)
+            redirect_to @site, notice: 'Site was successfully updated.'
+        else
+            render :edit
         end
     end
 
     # DELETE /sites/1
-    # DELETE /sites/1.json
     def destroy
         @site.destroy
-        respond_to do |format|
-            format.html { redirect_to sites_url, notice: 'Site was successfully destroyed.' }
-            format.json { head :no_content }
-        end
+        redirect_to sites_url, notice: 'Site was successfully destroyed.'
     end
 
     private

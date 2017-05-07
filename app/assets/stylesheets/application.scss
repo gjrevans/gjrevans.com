@@ -5,12 +5,13 @@
 
 /* Libraries */
 @import "animate";
-@import "pace/blue/pace-theme-minimal";
+@import "pace/green/pace-theme-minimal";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
-
-/* Styles */
 @import "variables";
 @import "bootstrap";
+@import "ball";
+
+/* Styles */
 @import "mix_n_fix";
 @import "bootswatch";
 @import "styles";

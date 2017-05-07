@@ -1,22 +1,21 @@
 /* -- MAIN STYLES -- */
 
 /* -- ID'S -- */
+#home {
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: $brand-primary;
+    background-image: url('background.png');
+}
 #pageContent {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 #welcome {
     color: white;
-    background: rgba(0, 0, 0, 0.3);
-    padding-top: 11rem;
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 12rem;
     padding-bottom: 8rem;
-}
-#welcomeImage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: url("https://s3.amazonaws.com/gjrevans.com/images/header.jpg");
-    @include hero-image(26rem);
 }
 #projectImage {
     @include hero-image(22rem);
@@ -77,6 +76,7 @@ section {
         background: $bg-color-1;
     }
     &--grey {
+        @extend .transparent--background;
         background: $bg-color-2;
     }
     &--title {
@@ -111,8 +111,15 @@ section {
         margin: 0 0 0 1em;
     }
 }
-
-// Responsive
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+    #home {
+        background-repeat: repeat;
+        background-attachment: fixed;
+        background-size: 560px 360px;
+        background-color: $brand-primary;
+        background-image: url('background@2x.png');
+    }
+}
 .card-columns {
     @include media-breakpoint-only(sm) {
         column-count: 1;

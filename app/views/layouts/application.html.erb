@@ -61,7 +61,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body>
+<body id="<%= 'home' if current_page?(root_path) %>">
     <%= render partial: 'layouts/notify', flash: flash %>
     <% safe_id = params[:id] || 0 %>
     <%= render partial: "layouts/header" if current_page?(root_path) || current_page?(controller: "/projects", action: "show", id: safe_id) %>

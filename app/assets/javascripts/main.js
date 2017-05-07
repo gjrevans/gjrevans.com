@@ -24,7 +24,7 @@ $(document).ready(function(){
             });
         } else if (scroll >= 100) {
             $(".nav--top").css("background", "white").addClass("box-shadow");
-            $(".nav--link a").css("color", "#4e97cc");
+            $(".nav--link a").css("color", "#03a9f4");
             $(".nav--avatar img").css({
                 "width": "3rem",
                 "height": "3rem",

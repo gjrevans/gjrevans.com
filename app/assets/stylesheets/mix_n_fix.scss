@@ -4,9 +4,9 @@
 
 /* -- MIXINS -- */
 @mixin hero-image($image-height) {
-    z-index: $zindex-hero;
     width: 100%;
     height: $image-height;
+    z-index: $zindex-hero;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -20,6 +20,11 @@
 .box-shadow {
     -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.transparent--background {
+    background-attachment: fixed;
+    background-image: url('background--transparent.png') !important;
+    background-repeat: repeat !important;
 }
 
 /* -- LIBRARIES -- */

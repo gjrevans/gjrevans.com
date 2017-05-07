@@ -18,12 +18,9 @@
 <section id="overview" class="section--white">
     <div class="container text-xs-center">
         <div class="row">
-            <div class="col-md-12">
-                <p>This site exists for the following two reasons.</p>
-                <p>
-                    <strong>First</strong>, come on, who doesn't have a personal website. So, <code>hello world</code>.<br>
-                    <strong>Second</strong>, I'll use this site as the foundation for a bunch of frontend experimentation and hobby projects.
-                </p>
+            <div class="col-md-6 offset-md-3">
+                <p><kbd>puts 'hello world'</kbd></p>
+                <p>Here you'll find a collection of my startup adventures, some examples of my development and design experimentation and handful hobby projects.</p>
             </div>
             <!-- GYRO ANIMATION -->
             <div class="col-md-12">
@@ -44,7 +41,7 @@
         <div class="row text-xs-center">
             <div class="col-md-12">
                 <h5 class="section--title mb-2">Stories</h5>
-                <p>Slowly growing a collection of my startup stores,rants and more.</p>
+                <p>Slowly growing a collection of my startup stores, rants, etc.</p>
             </div>
             <%= render partial: "projects/project_card" %>
         </div>
@@ -53,12 +50,18 @@
 
 <section id="about" class="section--white text-xs-center">
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <h5 class="section--title">Who is This Gordon Guy</h5>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <h5 class="section--title">Who's This Gordon Guy?</h5>
                 <p>The answer to that question is probably best answered with what I'm working on at the time the quesiton is asked. Currently, I'm situated with an exciting, young startup we've dubbed <a href="https://wirkn.com" target="_blank">Wirkn</a>. There I head up the product and engineering team as the company's CPO.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="section--title">Getting Here...</h5>
                 <p>Ten years ago, I stepped foot on <a href="https://uwaterloo.ca" target="_blank">UWaterloo</a> campus for the first time. With a graphing calculator in one hand and a Big Gulp in the other. I couldn't have been more excited about my future in Mechanical Engineering.<p>
                 <p>Little did I know that just one year later I'd be trading my iron ring in for late nights with my trusty MacBook on a beat-up couch, in a colorfully decorated startup office.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="section--title">And Now...?</h5>
                 <p>Since then I've helped grow, sell and gracefully bring to a close and a number of startup companies across North Ameria.</p>
                 <p>I invite you to enjoy some of my stories and to checkout the hobby projects I've created to keep my development and design skills sharp.</p>
             </div>
@@ -73,9 +76,8 @@
                 <h5 class="section--title">Hobby Projects</h5>
                 <p>
                     Here you'll find some of the hobby projects I've been working on to keep my skills sharp.<br>
-                    Please note, I'm using the free tier of Heroku to host these site so they can take up to 30s to load.
+                    <small class="text-muted">Please note, I've used the free tier of Heroku to host many of these sites. They can take up to 30s to load.</small>
                 </p>
-
                 <div class="card-columns">
                     <%= render partial: "sites/site_card" %>
                 </div>
@@ -88,12 +90,12 @@
     </div>
 </section>
 
-<section id="sites" class="section--white text-xs-center">
+<section id="technologies" class="section--white text-xs-center">
     <div class="container">
         <div class="row text-xs-center">
             <div class="col-md-8 offset-md-2 mb-3">
                 <h5 class="section--title">Technologies</h5>
-                <p>With the risk of sounding like a <del>brilliant engineer</del> crotchety old man, I tend to advocate for the use of <a href="http://mcfunley.com/choose-boring-technology" target="_blank">'boring technologies'</a> that get the job done. I try avoid choosing the latest and greatest and belive there's always time to go back and have fun when the task at hand has been completed.</p>
+                <p>With the risk of sounding like a <del>crotchety old man</del> brilliant engineer, I tend to advocate for the use of <a href="http://mcfunley.com/choose-boring-technology" target="_blank">'boring technologies'</a>. Tools that get the job done and don't introduce unnecessary complexities with time is of the essence.</p>
                 <p>Some of the technologies I love to work with.</p>
             </div>
         </div>

@@ -5,4 +5,6 @@ class PagesController < ApplicationController
         @sites = Site.all
         @technologies = JSON.parse(File.read('public/json/technologies.json'))
     end
+    def animations
+    end
 end

@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  image: MyString
-  github: MyString
-  link: MyString
+  title: 'My Title'
+  image: 'https://google.com'
+  github: 'https://google.com'
+  link: 'https://google.com'
+  description: 'This is a description'
 
 two:
-  title: MyString
-  image: MyString
-  github: MyString
-  link: MyString
+  title: 'My Title 2'
+  image: 'https://google.com'
+  github: 'https://google.com'
+  link: 'https://google.com'
+  description: 'This is a description 2'

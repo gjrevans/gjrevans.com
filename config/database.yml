@@ -1,15 +1,17 @@
 default: &default
-  adapter: sqlite3
   pool: 5
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  username: homepage
+  password: homepagepsql
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: homepagedev
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: homepagetest
 
 production:
   <<: *default

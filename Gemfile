@@ -21,13 +21,13 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'devise'
 gem 'friendly_id'
 gem 'compass-rails'
+gem 'pg'
 
 group :development, :test do
     gem 'byebug', platform: :mri
 end
 
 group :development do
-    gem 'sqlite3'
     gem 'web-console'
     gem 'listen', '~> 3.0.5'
     gem 'spring'
@@ -35,7 +35,6 @@ group :development do
 end
 
 group :production do
-    gem 'pg'
     gem 'rails_12factor'
 end
 

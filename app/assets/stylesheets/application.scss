@@ -4,15 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600');
 
 /* Libraries */
-@import "animate";
 @import "pace/yellow/pace-theme-minimal";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 @import "variables";
 @import "bootstrap";
-@import "gyroscope";
-@import "mars_landing";
+@import "animations/animate";
+@import "animations/mars_landing";
+@import "animations/ball";
 
 /* Styles */
-@import "mix_n_fix";
-@import "bootswatch";
+@import "global";
 @import "styles";

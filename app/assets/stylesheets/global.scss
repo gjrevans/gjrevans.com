@@ -1,6 +1,44 @@
-// Mixins & Helpers
+// Global Fixes
+// 1. BootStrap Overrides
+// 2. Add additional mixins and helpers to this file
+
+/* -- BOOTSTRAP OVERRIDES -- */
+
+// 1. Cards
 //
-// Add additional mixins and helpers to this file
+.card:hover {
+    @extend .box-shadow;
+    @extend .transition;
+    border: 1px solid $brand-primary;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+// 2. Typography
+//
+a {
+    @extend .transition;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p {
+    font-weight: 300;
+}
+
+label {
+    font-weight: 600;
+}
+
+// 3. Display
+.hidden {
+    display: none;
+}
+
 
 /* -- MIXINS -- */
 @mixin hero-image($image-height) {

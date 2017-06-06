@@ -1,21 +1,20 @@
 @import "compass/css3";
 
 $timing: 8s;
-$curve1: cubic-bezier(0.455, 0.03, 0.615, 0.555);
-$curve2: cubic-bezier(0.645, 0.045, 0.355, 1);
+$curve: cubic-bezier(0.645, 0.045, 0.355, 1);
 
 .mars {
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: planet-bump $timing $curve2 infinite;
+    animation: planet-bump $timing $curve infinite;
     .flag {
         position: absolute;
         height: 17px;
         width: 15px;
         top: -57px;
         left: -1px;
-        animation: flag-pole $timing $curve2 infinite;
+        animation: flag-pole $timing $curve infinite;
 
         &:before {
             content: "";
@@ -32,7 +31,7 @@ $curve2: cubic-bezier(0.645, 0.045, 0.355, 1);
             left: 2px;
             top: 0;
             background: $brand-danger;
-            animation: flag-unfurl $timing $curve2 infinite;
+            animation: flag-unfurl $timing $curve infinite;
         }
     }
     &:before {
@@ -107,13 +106,13 @@ $curve2: cubic-bezier(0.645, 0.045, 0.355, 1);
     background: rgba(0,0,0,.1);
     transform-origin: 0% 100% 0;
     z-index: 1;
-    animation: ship $timing $curve2 infinite;
+    animation: ship $timing $curve infinite;
 
     .ship-rotate {
         position: absolute;
         height: 22px;
         transform: rotate(-110deg);
-        animation: ship-rotate $timing $curve2 infinite;
+        animation: ship-rotate $timing $curve infinite;
     }
     .pod {
         position: absolute;
@@ -157,7 +156,7 @@ $curve2: cubic-bezier(0.645, 0.045, 0.355, 1);
     width: 16px;
     background: rgba(0,0,0,.2);
     border-radius: 100%;
-    animation: ship-shadow $timing $curve2 infinite;
+    animation: ship-shadow $timing $curve infinite;
 }
 
 @keyframes ship {

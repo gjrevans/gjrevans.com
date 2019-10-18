@@ -1,136 +1,145 @@
 /* -- ID'S -- */
 #home {
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-color: $brand-primary;
-    background-image: image-url('background.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-color: $primary;
+  background-image: image-url('background.png');
 }
 #pageContent {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 #welcome {
-    color: white;
-    background: rgba(0, 0, 0, 0.1);
-    padding-top: 12rem;
-    padding-bottom: 8rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  padding-top: 12rem;
+  padding-bottom: 8rem;
 }
 #projectImage {
-    @include hero-image(22rem);
+  @include hero-image(22rem);
 }
 
 /* -- NAVIGATION -- */
 nav {
-    // BASE PADDING
-    padding: 1rem 0;
-    &.nav--top {
-        position: fixed;
-        top: 0;
-        z-index: $zindex-navbar;
-        background: transparent;
-        width: 100%;
-    }
-    &.nav--root {
-        -webkit-transition: all .8s;
-        transition: all .8s;
-    }
-    .nav--avatar {
-        z-index: 1000;
-        img {
-            @extend .transition;
-            border-radius: 50%;
-            height: $avatar-size;
-            width: $avatar-size;
-        }
-    }
+  // BASE PADDING
+  padding: 1rem 0;
+  &.nav--top {
+    position: fixed;
+    top: 0;
+    z-index: $zindex-navbar;
+    background: transparent;
+    width: 100%;
+  }
+  &.nav--root {
+    -webkit-transition: all .8s;
+    transition: all .8s;
+  }
+  &.nav--scrolled {
+    background: $white;
+    color: $primary;
     .nav--list {
-        @extend .transition;
-        padding-top: 1rem;
-        padding-left: 0;
-        position: relative;
-        float: right;
-        li {
-            display: block;
-            float: left;
-            a {
-                color: white;
-                margin: 0 0 0 2em;
-                &:hover {
-                    color: $brand-primary;
-                }
-            }
-            &:first-child > a {
-                margin-left: 0;
-            }
-        }
+      li > a {
+        color: $primary;
+      }
     }
+  }
+  .nav--avatar {
+    z-index: 1000;
+    img {
+      @extend .transition;
+      border-radius: 50%;
+      height: $avatar-size;
+      width: $avatar-size;
+    }
+  }
+  .nav--list {
+    @extend .transition;
+    padding-top: 1rem;
+    padding-left: 0;
+    position: relative;
+    float: right;
+    li {
+      display: block;
+      float: left;
+      a {
+        color: white;
+        margin: 0 0 0 2em;
+        &:hover {
+          color: $primary;
+        }
+      }
+      &:first-child > a {
+        margin-left: 0;
+      }
+    }
+  }
 }
 
 /* -- PAGE SECTIONS -- */
 section {
-    padding: 4rem 0;
+  padding: 4rem 0;
 }
 .section {
-    &--white {
-        background: $bg-color-1;
-    }
-    &--grey {
-        @extend .transparent--background;
-        background: $bg-color-2;
-    }
-    &--title {
-        margin-bottom: 0.5rem;
-    }
+  &--white {
+    background: $gray-100;
+  }
+  &--grey {
+    @extend .transparent--background;
+    background: $gray-200;
+  }
+  &--title {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* -- PROJECTS -- */
 .read-time-floater {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    z-index: $zindex-floater;
-    border: 2px solid $brand-primary;
-    background: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: $zindex-floater;
+  border: 2px solid $primary;
+  background: rgba(255, 255, 255, 0.9);
 }
 .read-time-content {
-    text-align: center;
-    margin-top: 24px;
+  text-align: center;
+  margin-top: 24px;
 }
 .read-time-number {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* -- RESPONSIVE FIXES -- */
 @include media-breakpoint-only(xs) {
-    nav .nav--list li a {
-        margin: 0 0 0 1em;
-    }
+  nav .nav--list li a {
+    margin: 0 0 0 1em;
+  }
 }
 @include media-breakpoint-only(sm) {
-    #welcome {
-        padding-bottom: 3rem;
-    }
+  #welcome {
+    padding-bottom: 3rem;
+  }
 }
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-    #home {
-        background-repeat: repeat;
-        background-attachment: fixed;
-        background-size: 560px 360px;
-        background-color: $brand-primary;
-        background-image: image-url('background@2x.png');
-    }
+  #home {
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 560px 360px;
+    background-color: $primary;
+    background-image: image-url('background@2x.png');
+  }
 }
 .card-columns {
-    @include media-breakpoint-only(sm) {
-        column-count: 1;
-    }
-    @include media-breakpoint-only(md) {
-        column-count: 2;
-    }
-    @include media-breakpoint-only(xl) {
-        column-count: 3;
-    }
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
 }

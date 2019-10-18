@@ -1,8 +1,12 @@
 class ProjectsController < ApplicationController
-    before_action :authenticate_user!, except: [:show]
+    before_action :authenticate_user!, except: [:show, :stories]
     before_action :set_project, only: [:show, :edit, :update, :destroy]
 
     def index
+        @projects = Project.order('id ASC')
+    end
+
+    def stories
         @projects = Project.order('id ASC')
     end
 

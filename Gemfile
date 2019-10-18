@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.3.1"
+ruby "2.6.3"
 gem 'rails', '~> 5.0.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -12,7 +12,7 @@ gem "awesome_print", require:"ap"
 gem 'ionicons-rails'
 gem 'modernizr-rails'
 gem "font-awesome-rails"
-gem 'bootstrap', '~> 4.0.0.alpha5'
+gem 'bootstrap', '~> 4.3.1'
 gem 'tether-rails'
 gem 'pace-rails'
 gem 'mail_form'

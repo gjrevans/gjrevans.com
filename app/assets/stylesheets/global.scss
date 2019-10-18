@@ -9,7 +9,7 @@
 .card:hover {
     @extend .box-shadow;
     @extend .transition;
-    border: 1px solid $brand-primary;
+    border: 1px solid $primary;
 }
 
 .card-img-top {
